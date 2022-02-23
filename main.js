@@ -1,40 +1,23 @@
 const dd = prompt('Ведите цвет')
+const red = document.getElementById("red")
+const yellow = document.getElementById("yellow")
+const green = document.getElementById("green")
 
-switch (dd) {
+switch (dd.toLowerCase()) {
     case 'красный':
-        alert('STOP!!!');
+        red.style.backgroundColor="red"
+        red.innerText="STOP"
         break;
     case 'зеленый':
-        alert('GO!');
+        green.style.backgroundColor="green"
+        green.innerText="GO"
         break;
     case 'желтый':
-        alert('Attention!!');
+        yellow.style.backgroundColor="yellow"
+        yellow.innerText="GET READY"
         break;
     default:
         alert('Ведите цвет!!!');
         break;
 }
-function changeDiv (id) {
-    if (id == document.getElementById('closedred')) {
-        document.getElementById('closered').style.background = 'red';
-        document.getElementById('closedyellow').style.backgroundColor = 'closedyellow';
-        document.getElementById('closedgreen').style.backgroundColor = 'closedgreen';
-    }
-    if (id == document.getElementById('closedyellow')) {
-        document.getElementById('closedred').style.backgroundColor = 'closedred';
-        document.getElementById('closedyellow').style.backgroundColor = 'yellow';
-        document.getElementById('closedgreen').style.backgroundColor = 'closedgreen';
-    }
-    if (id == document.getElementById('closedgreen')) {
-        document.getElementById('closered').style.backgroundColor = 'closedred';
-        document.getElementById('closedyellow').style.backgroundColor = 'closedyellow';
-        document.getElementById('closedgreen').style.backgroundColor = 'green';
-    }
-}
-    function on(elem) {
-      var x, lights = document.querySelectorAll("#back > div");
-      for (x in lights) {
-        lights[x].className = "closed"
-      }
-      elem.className = "open"
-    }
+
